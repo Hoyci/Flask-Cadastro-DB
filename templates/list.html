@@ -1,0 +1,24 @@
+{% extends "basic.html" %}
+{% block content %}
+<div class="container">
+    <div class="jumbotron">
+        <h3>Aqui está a nossa lista de funcionários e algumas informações sobre eles</h3>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Data de Aniversário</th>
+            </tr>
+            {% for funcionario in funcionarios %}
+            <tr>
+                <td>{{funcionario.id}}</td>
+                <td>{{funcionario.nome}}</td>
+                <td>{{funcionario.email}}</td>
+                <td>{{funcionario.aniversario}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock %}

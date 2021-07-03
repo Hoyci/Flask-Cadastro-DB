@@ -1,0 +1,14 @@
+{% extends "basic.html" %}
+{% block content %}
+<div class="container">
+    <div class="jumbotron">
+        <h1>Você deseja excluir um funcionário do banco de dados?</h1>
+        <p>Insira o ID do funcionário no campo abaixo para remover</p>
+        <form method="POST">
+            {{form.hidden_tag()}}
+            {{form.id.label}}{{form.id}}
+            {{form.enviar()}}
+        </form>
+    </div>
+</div>
+{% endblock %}
